@@ -6,6 +6,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown= true)
 public class Movie {
 	
+	@JsonProperty("id")
+	public long id;
+	
 	@JsonProperty("original_title")
 	public String originalTitle;
 	
@@ -27,7 +30,30 @@ public class Movie {
 	@JsonProperty("release_date")
 	public String releaseDate;
 	
+	@JsonProperty("vote_average")
+	public double voteAverage;
 	
+	@JsonProperty("poster_path")
+	public String posterPath;
+	
+	
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+	
+	
+	public double getVoteAverage() {
+		return voteAverage;
+	}
+
+	public void setVoteAverage(double voteAverage) {
+		this.voteAverage = voteAverage;
+	}
 
 	public String getTitle() {
 		return title;
